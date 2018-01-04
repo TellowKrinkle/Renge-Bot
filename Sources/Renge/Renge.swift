@@ -91,7 +91,7 @@ class Renge : DiscordClientDelegate {
 
 	func client(_ client: DiscordClient, didDisconnectWithReason reason: String) {
 		//TODO: Actually handle this
-		CFRunLoopStop(CFRunLoopGetMain())
+		running = false
 	}
 
 	func connect() {
