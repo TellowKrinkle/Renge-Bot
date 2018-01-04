@@ -25,7 +25,7 @@ public func RengeStart() {
 	let renge = Renge(info: info)
 	renge.connect()
 
-	CFRunLoopRun()
+	while renge.running && RunLoop.current.run(mode: .defaultRunLoopMode, before: Date.distantFuture) {}
 //	let session = URLSession(configuration: .default)
 //	let group = DispatchGroup()
 //	group.enter()

@@ -19,6 +19,7 @@ class Renge : DiscordClientDelegate {
 	
 	var client: DiscordClient!
 	var mainQueue: DispatchQueue = DispatchQueue(label: "renge.mainQueue", qos: .userInitiated)
+	var running: Bool = false
 	let botName: String
 	let botOwner: UserID
 	
@@ -93,6 +94,7 @@ class Renge : DiscordClientDelegate {
 	}
 
 	func connect() {
+		running = true
 		client.connect()
 	}
 }

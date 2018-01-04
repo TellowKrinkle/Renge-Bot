@@ -54,7 +54,7 @@ struct ShutdownCommand : RengeCommand {
 				if ok {
 					group.notify(queue: .global()) {
 						bot.client.disconnect()
-						CFRunLoopStop(CFRunLoopGetMain())
+						bot.running = false
 					}
 				}
 			}
