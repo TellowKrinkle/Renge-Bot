@@ -1,5 +1,6 @@
 import Foundation
 import SwiftDiscord
+import Dispatch
 
 class Renge : DiscordClientDelegate {
 	static var logger = RengeLogger(level: .debug)

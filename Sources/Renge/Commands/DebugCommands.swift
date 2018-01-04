@@ -32,7 +32,7 @@ struct YoutubeVolumeInfo : RengeCommand {
 	
 	func execute(bot: Renge, arguments: Substring, messageObject: DiscordMessage, user: UserID, channel: ChannelID, errorLogger: @escaping (DiscordMessage) -> Void, output: @escaping (DiscordMessage) -> Void) {
 		var arguments = arguments
-		if arguments.hasPrefix("<") && arguments.hasSuffix(">") {
+		if arguments.first == "<" && arguments.last == ">" {
 			arguments = arguments[arguments.index(after: arguments.startIndex)..<arguments.index(before: arguments.endIndex)]
 		}
 		guard let url = URL(string: String(arguments)) else {

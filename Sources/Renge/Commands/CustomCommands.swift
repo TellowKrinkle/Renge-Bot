@@ -162,7 +162,7 @@ struct MakeEmbedCommand : RengeCommandWithLongArguments {
 		let color = arguments["--color"].flatMap { (str) -> Int? in
 			if let int = Int(str) { return int }
 			if let int = Int(str, radix: 16) { return int }
-			if str.hasPrefix("#") {
+			if str.first == "#" {
 				if let int = Int(str[str.index(after: str.startIndex)...], radix: 16) { return int }
 			}
 			return nil

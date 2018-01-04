@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftDiscord
+import Dispatch
 import Atomics
 
 // From https://docs.rs/crate/seahash/3.0.5/source/src/helper.rs
