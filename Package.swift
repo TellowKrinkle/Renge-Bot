@@ -7,7 +7,7 @@ let package = Package(
 	name: "Renge",
 	dependencies: [
 		// Dependencies declare other packages that this package depends on.
-		.package(url: "https://github.com/nuclearace/SwiftDiscord.git", from: "5.0.0"),
+		.package(url: "https://github.com/nuclearace/SwiftDiscord.git", from: "6.0.0"),
 		.package(url: "https://github.com/glessard/swift-atomics.git", from: "4.0.0")
 	],
 	targets: [
